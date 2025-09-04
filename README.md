@@ -2,7 +2,9 @@
 
 ## Python Environment
 
-```conda create --name DTU_machine-learning python=3.11```
+```
+conda create --name DTU_machine-learning python=3.11
+```
 
 To activate this environment, use
 ```
