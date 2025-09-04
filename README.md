@@ -1,5 +1,8 @@
-# DTU_machine-learning
+# DTU 02452 - Machine Learning
 
+## Python Environment
+
+```conda create --name DTU_machine-learning python=3.11```
 
 To activate this environment, use
 ```
