@@ -46,8 +46,8 @@ It's often considered a "bonus" result that is easy to derive once the main resu
 }
 
 .callout[data-callout="term"] {
-  --callout-color: 133, 133, 133; /* A bright yellow color */
-  --callout-icon: lucide-open-book;
+  --callout-color: 63, 63, 63;
+  --callout-icon: lucide-book-open;
 }
 
 /* Optional: Style the title font to be bolder or different */
