@@ -85,3 +85,23 @@ $$
 -   $p(b = 0) = 1 - \theta$
 
 $$\boxed{p(b|\theta) = \theta^b (1 - \theta)^{1-b}}$$
+
+---
+
+## Repeated Bernouilli trials
+
+Suppose we observe a sequence $b_1,\ldots,b_N$ of Bernoulli (binary) events. The **likelihood function** of this sequence given the parameter $\theta$ - assuming the events are **independent** - is:
+
+$$
+\begin{aligned}
+p(b_1, \ldots, b_N | \theta) &= \prod_{i=1}^N p(b_i | \theta) && \text{by independence} p(x,y|z) = p(x|z)p(y|z) \\
+&= \prod_{i=1}^N \theta^{b_i} (1 - \theta)^{1 - b_i} \\
+&= \theta^{\sum_{i=1}^N b_i} (1 - \theta)^{N - \sum_{i=1}^N b_i} \\
+&= \boxed{\theta^m (1 - \theta)^{N - m}} && m = b_1 + \ldots + b_N
+\end{aligned}
+$$
+
+The likelihood is the joint possibility of the observations to be true given the parameter $\theta$.
+
+Now, we want to find the value of $\theta$ that maximizes this likelihood. This is called **Maximum Likelihood Estimation (MLE)**:
+$$\theta^* = \arg\max_\theta p(b_1, \ldots, b_N | \theta) = \arg\max_\theta \theta^m (1 - \theta)^{N - m}$$

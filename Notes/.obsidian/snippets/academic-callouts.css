@@ -26,6 +26,11 @@
   --callout-icon: lucide-balance-scale;
 }
 
+.callout[data-callout="exam"] {
+  --callout-color: 255, 0, 0;
+  --callout-icon: lucide-circle-alert;
+}
+
 /* 
 A corollary is a statement that follows directly from a theorem or a definition.
 It's often considered a "bonus" result that is easy to derive once the main result is known.

@@ -86,6 +86,7 @@ $$
 We see that $x_1$ and $x_2$ are independent within each class:
 $$\text{cov}(x_1, x_2 | y=\text{female}) = 0 = \text{cov}(x_1, x_2 | y=\text{female})$$
 
-So, the 2-dimensional Gaussian $$p(x_1, x_2 | y = \text{female}) = p(x_1 | y = \text{female}) p(x_2 | y = \text{female})$$is the **product of two univariate gaussians**:
+So, assuming that $x_1$ and $x_2$ are *conditionally* independent, the 2-dimensional Gaussian is the **product of two univariate gaussians**:
+$$p(x_1, x_2 | y = \text{female}) = p(x_1 | y = \text{female}) p(x_2 | y = \text{female})$$
 
 ![[images/13-independent-gaussians.png]]
