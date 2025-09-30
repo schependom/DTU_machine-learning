@@ -1,3 +1,5 @@
+# Densities
+
 -   We **can not** talk about the probability of a single point (**exact value**) in continuous space.
 -   We **can** talk about the probability of a point falling within a certain region (**between two values**).
 
@@ -61,6 +63,8 @@ Assume $$\bm{\mu} = \begin{bmatrix} \bar{x}_1 \\ \bar{x}_2 \end{bmatrix} = \begi
 
 ---
 
+# Bayesian Inference
+
 ## Beta distribution $\text{Beta}(\theta | \alpha, \beta)$
 
 The **Beta distribution** is a distribution over the interval $[0, 1]$ and is parameterized by two positive parameters $\alpha$ and $\beta$:
@@ -104,6 +108,12 @@ The **posterior** distribution $p(\bm{w} | \bm{X}, \text{hyperparams})$
 
 _E.g. for the Bernouilli_:
 $$p(\theta | N=..., m=..., \alpha, \beta) = \frac{p(N,m | \theta)p(\theta | \alpha, \beta)}{p(N,m)}$$
+
+---
+
+## Notation
+
+![[images/6-notation-bayesian.jpg]]
 
 ## Bayesian Inference
 

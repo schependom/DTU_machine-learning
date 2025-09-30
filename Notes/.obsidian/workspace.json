@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 5 - Probabilities.md",
+                "file": "Chapter 6 - Densities.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 5 - Probabilities"
+              "title": "Chapter 6 - Densities"
             }
           }
         ]
@@ -171,6 +171,9 @@
   },
   "active": "df34af969e5022f0",
   "lastOpenFiles": [
+    "Chapter 5 - Probabilities.md",
+    "images/6-notation-bayesian.jpg",
+    "images/Screenshot 2025-09-30 at 15.54.21.jpg",
     "images/6-bayesian-inference.jpg",
     "images/6-beta.jpg",
     "images/6-mle-summary.jpg",
@@ -180,10 +183,6 @@
     "images/Screenshot 2025-09-30 at 15.13.11.jpg",
     "images/8-general-linear-model.jpg",
     "images/Screenshot 2025-09-30 at 15.11.11.jpg",
-    "Chapter 5 - Probabilities.md",
-    "images/5-beta.jpg",
-    "images/Screenshot 2025-09-30 at 13.39.50.jpg",
-    "images/5-bayesian-inference.jpg",
     "Chapter 13 - Bayes and Naieve Bayes.md",
     "Chapter 12 - Nearest neighbour methods.md",
     "Chapter 4 - Summary statistics & measures of similarities.md",
