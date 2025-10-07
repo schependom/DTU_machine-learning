@@ -79,7 +79,11 @@ Use the Bernouilli distribution to model the likelihood of the data.
 
 -   Problem: $\tilde{w}^T \bm{x}$ can be any real number, but we need a probability in $[0,1]$.
 -   Solution: use the sigmoid function to squash the output to $[0,1]$:
-    $$\theta_i = \sigma(f(\bm{x}_i; \bm{w})) \qquad \text{with } \sigma(z) = \frac{1}{1 + e^{-z}}$$
+    $$\boxed{p(y_i | \bm{x}_i, \bm{w}) = \theta_i^{y_i} (1 - \theta_i)^{1 - y_i}} = \text{Bernouilli}(y_i | \theta_i)$$
+    where
+    $$\boxed{\theta_i = \sigma(f(\bm{x}_i; \bm{w}))} \qquad \text{with } \sigma(z) = \frac{1}{1 + e^{-z}}$$
+    and
+    $$\boxed{f(\bm{x}_i; \bm{w}) = \tilde{\bm{x}}_i^T \bm{w}} = w_0 + w_1 x_{i1} + \ldots + w_M x_{iM}$$
 
 Now we compute the negative log-likelihood, because minimising the negative log-likelihood is equivalent to maximising the likelihood, which is equivalent to maximising the posterior (if we assume a flat prior).
 
@@ -106,10 +110,10 @@ $$p = \sigma(x) = \frac{1}{1 + e^{-x}} \in \,]0,1[ $$
 
 ### Sigmoid function
 
-The sigmoid function is the inverse of the logit function:
+The **sigmoid function is the inverse of the logit** function:
 $$\boxed{\sigma(x) = \frac{1}{1 + e^{-x}}} = p \in \,]0,1[$$
 and
-$$x = \text{logit}(p) = \ln\left(\frac{p}{1-p}\right)$$
+$$\boxed{x = \text{logit}(p) = \ln\left(\frac{p}{1-p}\right)}$$
 
 ### Logistic regression model
 

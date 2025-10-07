@@ -152,10 +152,10 @@ In Bayesian inference, the **Maximum a posteriori (MAP)** estimation is a method
     - $\bm{y} = (y_1, \ldots, y_N)^\top$
     - $\bm{w}$ are the parameters of the model
 2. Make assumptions - Assume that the likelihood $p(\bm{y} | \bm{X}, \bm{w})$ factorizes over the data points
-   $\quad \Rightarrow$ the **data** points are **conditionally independent given the parameters** $\bm{w}$:
-   $\quad \Rightarrow$ When we know the parameters $\bm{w}$ and $\bm{x}_i$, the other observations are irrelevant in terms of predicting $y_i$:$$p(\bm{y} | \bm{X}, \bm{w}) = \prod_{i=1}^N p(y_i | \bm{x}_i, \bm{w})$$ - The prior $p(\bm{w})$ doesn't depend on the data $\bm{X}$:$$p(\bm{w} | \bm{X}) = p(\bm{w})$$
+   $\quad \Rightarrow$ the **data** points are **<u>conditionally independent given the parameters</u>** $\bm{w}$:
+   $\quad \Rightarrow$ When we know the parameters $\bm{w}$ and $\bm{x}_i$, the other observations are irrelevant in terms of predicting $y_i$:$$\boxed{p(\bm{y} | \bm{X}, \bm{w}) = \prod_{i=1}^N p(y_i | \bm{x}_i, \bm{w})}$$ - The prior $p(\bm{w})$ doesn't depend on the data $\bm{X}$:$$\boxed{p(\bm{w} | \bm{X}) = p(\bm{w})}$$
 3. Apply Bayes' theorem to compute the **posterior distribution of the parameters given the data**:
-   $$p(\bm{w} | \bm{X}, \bm{y}) = \frac{p(\bm{y} | \bm{X}, \bm{w}) p(\bm{w})}{p(\bm{y} | \bm{X})}$$
+   $$\boxed{p(\bm{w} | \bm{X}, \bm{y}) = \frac{p(\bm{y} | \bm{X}, \bm{w}) p(\bm{w} | \bm{X})}{p(\bm{y} | \bm{X})} = \frac{\prod_{i=1}^N p(y_i | \bm{x}_i, \bm{w}) p(\bm{w})}{p(\bm{y} | \bm{X})}}$$
 4. Find the most likely parameters given the data (**MAP** estimation):
     - Maximise the posterior:$$\bm{w}^* = \arg\max_{\bm{w}} p(\bm{w} | \bm{X}, \bm{y})$$
     - Or, equivalently, **minimize the negative log-posterior**:$$\bm{w}^* = \arg\min_{\bm{w}} E(\bm{w}) \qquad \text{with } E(w) = \frac{1}{N} \left[\sum_{i=1}^N - \log p(y_i | \bm{x}_i, \bm{w}) - \log p(\bm{w})\right ]$$
@@ -173,3 +173,8 @@ In Bayesian inference, the **Maximum a posteriori (MAP)** estimation is a method
 ## Summary of Bayesian Inference
 
 ![[images/6-mle-summary.jpg]]
+
+We multiply the prior with the likelihood to get the posterior.
+
+-   If we assume nothing upfront (flat prior), then the posterior $p(\bm{w} | \bm{X}, \bm{y})$ is equal to the likelihood $p(\bm{y} | \bm{X}, \bm{w})$ (=what our model predicts), which is what MLE does.
+-   If we have prior knowledge, we can encode it in the prior $p(\bm{w})$, and the posterior will be a compromise between the prior and the likelihood. In this case, we don't use MLE, but MAP estimation: maximize the posterior instead of the likelihood.
