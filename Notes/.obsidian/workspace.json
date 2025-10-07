@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter 8 - Introduction to classification and regression.md",
+                "file": "Chapter 10 - Overfitting and cross validation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 8 - Introduction to classification and regression"
+              "title": "Chapter 10 - Overfitting and cross validation"
             }
           }
         ]
@@ -171,8 +171,9 @@
   },
   "active": "36e3793b3adfc987",
   "lastOpenFiles": [
-    "Chapter 8 - Introduction to classification and regression.md",
     "Chapter 6 - Densities.md",
+    "Chapter 10 - Overfitting and cross validation.md",
+    "Chapter 8 - Introduction to classification and regression.md",
     "Chapter 5 - Probabilities.md",
     "images/6-notation-bayesian.jpg",
     "images/Screenshot 2025-09-30 at 15.54.21.jpg",
