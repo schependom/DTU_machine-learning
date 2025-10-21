@@ -13,7 +13,7 @@ For overly complex models
 
 Test error is more representative of the true error.
 
-## Generalisation error
+## Generalization error
 
 > **The generalization error is the test error evaluated over an infinitely large test set**
 
@@ -95,7 +95,21 @@ We have $S$ different models $\mathcal{M}_1, \ldots, \mathcal{M}_S$, $K_1$ outer
         -   Compute validation error $E^{\text{val}}_{\mathcal{M}_s, _j}$
 
 Compute the overall estimated generalization error as:$$\hat{E}^{\text{gen}} = \sum_{i=1}^{K_1} \frac{|\mathcal{D}^\text{test}_i|}{N} E^{\text{test}}_i$$
-$\rightarrow K_1(1 + K_2 S)$ models trained
+
+![[10-two-level.jpg]]
+
+$\rightarrow T = K_1(1 + K_2 S)$ models trained
+
+---
+
+### !! The final model that we will use?
+
+Count the number of times each model $\mathcal{M}_s$ is selected as best model in the $K_1$
+$\rightarrow N_s$ times
+
+$$\boxed{f(\mathbf{x}) = \frac{N_1 \cdot f_{\mathcal{M}_{1}}(\mathbf{x}) + \ldots + N_S \cdot f_{\mathcal{M}_{S}}(\mathbf{x})}{K_1}}$$
+
+Note that we train the selected models **again**, but this time on the **entire** dataset $\mathcal{D}$.
 
 ---
 
