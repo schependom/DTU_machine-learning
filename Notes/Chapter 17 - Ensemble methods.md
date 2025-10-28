@@ -20,6 +20,8 @@ This way, a large number of trees are generated and the trees are combined using
 
 ## Boosting
 
+We now turn our attention towards boosting instead of bagging. In boosting we iteratively change the distribution that we sample the training examples from so that the classifiers will focus on examples that are hard to classify. A particularly well known boosting method is `AdaBoost` where the ensemble's prediction accounts for the error rate per learner when doing the prediction.
+
 -   add weights to the pool of training data
 -   train classifier $C_1$ on new training data set, obtained by sampling **with replacement according to weights**
 -   classify all data objects
@@ -30,7 +32,7 @@ This way, a large number of trees are generated and the trees are combined using
 ### AdaBoost
 
 -   each classifier $C_m$ has weight $\alpha_m$ based on its accuracy
--   use majority vote weighted by $\alpha_m$ to classify new objects
+-   To make the final classification, take a weighted majority vote amongst the classifiers in the ensemble (weighted by $\alpha_m$)
 
 ![[images/17-adaboost-algo.jpg]]
 
