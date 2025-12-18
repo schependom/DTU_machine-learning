@@ -5,6 +5,8 @@
 The notes were made with [Obsidian](https://obsidian.md/), a powerful knowledge base that works on local Markdown files.
 You can clone this repository and open it in Obsidian.
 
+Have a look at [this repository](https://github.com/schependom/KUL_computer-science) for instructions and additional information about my course notes.
+
 ## Exercises
 
 ```
